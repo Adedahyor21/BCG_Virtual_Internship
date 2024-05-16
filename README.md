@@ -15,17 +15,17 @@ Python programming
 
 - Conversion of date columns
 ~~~python
-df["date_activ"] = pd.to_datetime(df["date_activ"], format='%Y-%m-%d')
+df["column_name"] = pd.to_datetime(df["column_name"], format='%Y-%m-%d')
 ~~~
 
 - Converting categorical columns to dummy variables
 ~~~python
-pd.get_dummies(df, columns = ['id', 'channel_sales'])
+pd.get_dummies(dataset, columns = ['column1', 'column2'])
 ~~~
 
 - Dropping unnecessary columns
 ~~~python
-df.drop(columns = 'origin_up', axis = 1, inplace = True)
+df.drop(columns = 'column_name', axis = 1, inplace = True)
 ~~~
 
 - Importing metrics and libraries for splitting data and Modelling
@@ -37,8 +37,8 @@ from sklearn.ensemble import RandomForestClassifier
 
 - Setting values and target variables
 ~~~python
-y = df['churn']
-X = df.drop(columns=['id', 'churn'])
+y = df['ctarget_column']
+X = df.drop(columns=['id_column', 'target_column'])
 ~~~
 
 - Splitting Data into train and test sets
